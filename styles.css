@@ -45,7 +45,7 @@ body
 
 #underline
 {
-    border-bottom: 2px solid rgb(0, 163, 251);
+    border-bottom: 2px solid rgb(0, 247, 251);
     padding-bottom: 0%;
     animation: slideInFromLeft 1s ease-out;
     animation-iteration-count: infinite;
@@ -70,6 +70,8 @@ nav
     float: right;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
     
 }
 
@@ -82,14 +84,14 @@ nav a
     padding: 10px 20px;
     border-radius: 8px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.6em;
 }
 
 nav h1
 {
     font-family: shock-surgent;
     float: right;
-    font-size: 150%;
+    font-size: 2em;
     font-weight: bold;
     padding: 0 15px;
 }
@@ -97,7 +99,7 @@ nav h1
 .logo
 {
     font-family: shock-surgent;
-    font-size: 150%;
+    font-size: 3em;
     font-weight: bold;
     padding: 0 15%;
     margin: 25% 0% 25% 0%;
@@ -119,35 +121,102 @@ nav a:active
     color:rgb(253, 253, 253);
     text-align: center;
     padding: 10%;
-    height: 25%;
+    height: 175%;
     font-size: 120%;
 }
 
-
 #about
 {
-    -webkit-margin-bottom-collapse: separate;
-    background-color: #6200ff;
-    color: rgba(255,255,255);
-    padding: 5%;
-    height: 25%;
-    font-size: 70%;
-    height: auto;
-    overflow: auto;
-}
-#about h2{
-    font-size: 300%;
-    float: left;
-    margin-right: 20px;
+    background-image: linear-gradient( #6200ff, black);
+    padding: 5rem 0;
 }
 
-#about p{
-    width: 60%;
-    font-size:200%;
-    float: left;
+#about div
+{
+border: 0;
+width: 70%;
+height: 10em;
+margin: 0 auto;
+font-size: 2em;
+background-image: url("images/aboutUs.gif");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+border-radius: 1rem;
+padding: 2rem;
+font-weight: bold;
+color: white;
+transition: box-shadow 0.3s;
+animation-name: appear;
+animation-timeline: view()
 }
 
-#about div{
-   display: block;
-   margin: auto;
+#about div:hover{
+    box-shadow: 1px 1px 5px white;
+    text-shadow: 1px 1px 2px black;
+}
+
+#about p
+{
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+#about h2
+{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 7%;
+}
+
+@keyframes appear{
+
+    0%{
+        opacity : 0;
+        scale : 0.5;
+    }
+    50% {
+        opacity : 1;
+        scale : 1;
+    }
+}
+
+#services
+{
+   border: 2px dashed black;
+   
+}
+
+#services h2
+{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#services ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    width: 200%;
+    text-align: justify;
+    
+}
+
+#services ul li{
+    width: 100%;
+    background-color: white;
+    
+}
+
+#services ul li img{
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
